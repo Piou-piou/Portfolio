@@ -111,10 +111,10 @@
 				</div>
 
 				<h5>Développement</h5>
-				<p>- Utilisation des languages PHP5 et MySQL</p>
+				<p>- Utilisation des languages PHP7 et MySQL</p>
 				<p>- Concevoir des outils d'administration pour des sites comme Ribs</p>
 				<p>- Création d'applications de gestion comme : L'appli Resto, Ekinox</p>
-				<p>- Mise en place de site internet dans des CMS comme Joomla!</p>
+				<p>- Mise en place de site internet dans des CMS comme Wordpress</p>
 			</div>
 			<div class="small-12 large-4 columns bloc">
 				<div class="small-4 medium-2 large-4 medium-centered small-centered columns">
@@ -123,7 +123,7 @@
 
 				<h5>Intégration</h5>
 				<p>- Utilisation des languages HTML5, CSS3, SCSS, jQuery</p>
-				<p>- Utilisation du framework Foundation afin de créer un site responsive design</p>
+				<p>- Utilisation des frameworks Foundation et Bootstrap afin de créer un site responsive design</p>
 				<p>- Intégration de front, backend et applications avec les technologies citées</p>
 			</div>
 			<div class="small-12 large-4 columns bloc">
@@ -136,7 +136,7 @@
 				<p>- Référencement SEO</p>
 				<p>- Analyse du trafic avec Google analytics</p>
 				<p>- Analyse globale du site avec Google outils pour les webmasters</p>
-				<p>- Utilisation des réseaux sociaux tel que Facebook et twitter</p>
+				<p>- Utilisation des réseaux sociaux tel que Facebook et Twitter</p>
 			</div>
 		</div>
 	</div>
