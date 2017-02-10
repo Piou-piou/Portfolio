@@ -1112,7 +1112,7 @@
 						</div>
 					</div>
 				</div>
-				<img src="<?=TPLWEBROOT?>images/portfolio/ruined-world.jpg" alt="Projet Clic & Com : création du site">
+				<img src="<?=TPLWEBROOT?>images/portfolio/ruined-world.jpg" alt="Projet Ruined-World : création d'un jeu web">
 				
 				<div class="card">
 					<div class="card__container card__container--closed">
@@ -1133,7 +1133,7 @@
 								<div class="meta">
 									<span class="meta__author">Ruined-World</span>
 									<span class="meta__date">Intégration | Développement | Design</span>
-									<span class="meta__date"><a href="http://ruined-world.perso.anthony-pilloud.fr/" target="_blank" title="Lien du site Clic & Com">Lien du site Clic & Com</a></span>
+									<span class="meta__date"><a href="http://ruined-world.perso.anthony-pilloud.fr/" target="_blank" title="Lien du site Ruined-World">Lien du site Ruined-World</a></span>
 								</div>
 								<p>Ruined-World est un jeu de stratégie et gestion web que je développe durant mon temps libre
 								</p>
