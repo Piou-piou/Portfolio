@@ -1135,8 +1135,7 @@
 									<span class="meta__date">Intégration | Développement | Design</span>
 									<span class="meta__date"><a href="http://ruined-world.perso.anthony-pilloud.fr/" target="_blank" title="Lien du site Clic & Com">Lien du site Clic & Com</a></span>
 								</div>
-								<p>Ruined-World est un jeu de stratégie web que je développe durant mon temps libre. C'est
-								   également un jeu de gestion ou il faut gérer ses ressources, ses bâtiments, troupes, ...
+								<p>Ruined-World est un jeu de stratégie et gestion web que je développe durant mon temps libre
 								</p>
 								
 								<p>Je m'occupe de la création intégrale du jeu sauf la partie design des bâtiments. Le but du jeu étant qu'à
