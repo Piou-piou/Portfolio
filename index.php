@@ -1088,6 +1088,77 @@
 					</div>
 				</div>
 			</div>
+			
+			
+			<div class="large-3 medium-4 small-12 columns">
+				<div class="masque">
+					<div class="row">
+						<div class="small-12">
+							<h2>Ruined-World</h2>
+							<h5>Intégration | Développement | Design</h5>
+							
+							<div class="first">
+								<p>Ruined-World est un jeu de stratégie web que je développe durant mon temps libre. C'est
+								   également un jeu de gestion ou il faut gérer ses ressources, ses bâtiments, troupes, ...
+								</p>
+							</div>
+							
+							<div class="last">
+								<p>Pour le viseul des bâtiments j'ai été aidé par Emmanuel Guillou...
+								</p>
+							</div>
+							
+							<a class="suite">Lire la suite</a>
+						</div>
+					</div>
+				</div>
+				<img src="<?=TPLWEBROOT?>images/portfolio/ruined-world.jpg" alt="Projet Clic & Com : création du site">
+				
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath19">
+									<circle class="clip" cx="960" cy="250" r="992"></circle>
+								</clipPath>
+							</defs>
+							<image class="img-presentation" clip-path="url(#clipPath19)" width="1920" height="500" xlink:href="<?=TPLWEBROOT?>images/portfolio/grande/ruined-world.jpg"></image>
+						</svg>
+						
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+							</div>
+							<div class="card__copy">
+								<div class="meta">
+									<span class="meta__author">Ruined-World</span>
+									<span class="meta__date">Intégration | Développement | Design</span>
+									<span class="meta__date"><a href="http://ruined-world.perso.anthony-pilloud.fr/" target="_blank" title="Lien du site Clic & Com">Lien du site Clic & Com</a></span>
+								</div>
+								<p>Ruined-World est un jeu de stratégie web que je développe durant mon temps libre. C'est
+								   également un jeu de gestion ou il faut gérer ses ressources, ses bâtiments, troupes, ...
+								</p>
+								
+								<p>Je m'occupe de la création intégrale du jeu sauf la partie design des bâtiments. Le but du jeu étant qu'à
+									partir de ressources minime de créer une base complexe avec une grand production.<br>
+									Une fois la base bien améliorée il sera possible de créer des troupes que l'on doit envoyer dans diverses
+									missions afin qu'elles gagnent de l'expérience ou qu'elles aillent chercher de la nourriture pour
+									survivre.<br>
+									Il sera dans le futur également possible une fois la base arrivée à son apogée d'en créer d'autres et de
+									recommencer ce procédé.<br>
+									Un système d'alliance est également prévu afin que les joueurs puisse s'unir dans les combats.
+								</p>
+								
+								<p>Le jeu est encore en développement, si vous souhaitez y avoir accès pour une démo
+								   n'hésitez pas à me contacter via le formulaire du site.</p>
+								
+								<p>Le projet est consultable dans on intégralité sur
+									<a href="https://github.com/Piou-piou/Ruined-World" target="_blank" title="Github Ruined World">github</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 
 			<div class="large-3 medium-4 small-12 columns">
