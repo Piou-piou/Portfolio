@@ -47,10 +47,8 @@ a {
 @keyframes bouton-scroll {
   0% {
     padding-bottom: 0; }
-
   50% {
     padding-bottom: 10px; }
-
   100% {
     padding-bottom: 0; } }
 .scroll-down {
@@ -83,14 +81,14 @@ a {
     font-family: "open-extrabold";
     font-weight: bolder;
     text-align: center;
-    color: #e6e6e7; }
+    color: #E6E6E7; }
   #accueil .accueil h1 {
     margin-top: 30%; }
   #accueil .accueil h5 {
     font-family: "Raleway";
     font-weight: normal; }
   #accueil .accueil span {
-    color: #de4344; }
+    color: #DE4344; }
 
 .page-fond {
   min-height: 100%;
@@ -106,7 +104,7 @@ a {
 .page-couleur {
   min-height: 100%;
   position: relative;
-  background-color: #de4344;
+  background-color: #DE4344;
   background-attachment: fixed;
   width: 100%;
   overflow: hidden; }
@@ -117,17 +115,17 @@ a {
   .a-propos .titre, .competences .titre, .portfolio .titre, .contact .titre {
     text-align: center; }
     .a-propos .titre h1, .competences .titre h1, .portfolio .titre h1, .contact .titre h1 {
-      color: white;
+      color: #FFFFFF;
       font-family: "open-extrabold"; }
     .a-propos .titre h5, .competences .titre h5, .portfolio .titre h5, .contact .titre h5 {
       color: #c4c4c4;
       margin-bottom: 1.5rem; }
       .a-propos .titre h5 span, .competences .titre h5 span, .portfolio .titre h5 span, .contact .titre h5 span {
-        color: #de4344; }
+        color: #DE4344; }
   .a-propos h3, .competences h3, .portfolio h3, .contact h3 {
     color: #fff; }
   .a-propos h5, .competences h5, .portfolio h5, .contact h5 {
-    color: white; }
+    color: #FFFFFF; }
 
 /*------------------------ A PROPOS -------------------------------*/
 @media screen and (max-width: 1025px) {
@@ -151,7 +149,7 @@ a {
   .competences .bloc:last-child {
     margin-right: 0; }
   .competences .bloc h5 {
-    color: white;
+    color: #FFFFFF;
     margin-bottom: 1rem;
     text-align: center; }
 @media screen and (min-width: 1025px) {
@@ -195,7 +193,7 @@ a {
     .portfolio .projets > div .masque h2, .portfolio .projets > div .masque h5 {
       text-align: center; }
     .portfolio .projets > div .masque h2 {
-      color: #de4344;
+      color: #DE4344;
       margin-top: -200px;
       transition: 0.3s; }
     .portfolio .projets > div .masque h5 {
@@ -203,14 +201,21 @@ a {
       transition: 0.7s; }
     .portfolio .projets > div .masque .first {
       margin-left: 500px;
-      width: 458px;
+      width: 100%;
       transition: 1.1s; }
     .portfolio .projets > div .masque .last {
       margin-left: -500px;
-      width: 458px;
+      width: 100%;
       transition: 1.5s; }
+    @media screen and (max-width: 1600px) {
+      .portfolio .projets > div .masque h2 {
+        font-size: 1.3rem; }
+      .portfolio .projets > div .masque h5 {
+        font-size: 0.9rem; }
+      .portfolio .projets > div .masque p {
+        font-size: 0.8rem; } }
     .portfolio .projets > div .masque .suite {
-      background-color: #de4344;
+      background-color: #DE4344;
       color: #fff;
       border: none;
       transition: 0.3s background-color ease;
@@ -223,7 +228,7 @@ a {
       position: relative;
       top: 200px; }
       .portfolio .projets > div .masque .suite:hover {
-        background-color: #ff5253;
+        background-color: #FF5253;
         transition: 0.3s background-color ease;
         cursor: pointer; }
   .portfolio .projets > div .img-presentation {
@@ -264,3 +269,5 @@ a {
     margin-top: 0; }
   .contact .submit {
     margin-top: 0.7rem; } }
+
+/*# sourceMappingURL=style.css.map */
