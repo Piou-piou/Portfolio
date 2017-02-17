@@ -31,13 +31,13 @@
 			<div class="small-12 large-7 columns">
 				<p>
 					<strong>Anthony Pilloud développeur web en Franche-Comté</strong>, employé en tant que
-					<strong>formateur de Zombies voués à devenir des développeurs web</strong>, au sein de la société <a href="http://www.onlineformapro.com/" title="Onlineformapro" target="_blank">Onlineformapro</a> depuis octobre 2017 pour le projet.
+					<strong>formateur de Zombies voués à devenir des développeurs web</strong>, au sein de la société <a href="http://www.onlineformapro.com/" title="Onlineformapro" target="_blank">Onlineformapro</a> depuis octobre 2016 pour le projet.
 					<a href="http://www.accesscodeschool.fr/" title="Access Code School" target="_blank">Access Code School</a>.
 				</p>
 				
 				<p>
 					J'étais anciennement employé en tant que
-					<strong>Développeur et intégrateur web</strong>, au sein de la société <a href="http://clicand.com" title="Clic & Com" target="_blank">Clic & Com</a> depuis avril 2014 jusqu'à fin septembre 2017.
+					<strong>Développeur et intégrateur web</strong>, au sein de la société <a href="http://clicand.com" title="Clic & Com" target="_blank">Clic & Com</a> depuis avril 2014 jusqu'à fin septembre 2016.
 				</p>
 
 				<p>Mon <strong>profil de développeur et intégrateur web</strong> vous intéresse, vous trouverez dans la partie
