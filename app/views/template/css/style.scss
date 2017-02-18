@@ -103,18 +103,6 @@ a {
 	}
 }
 
-.angle-bas-accueil {
-	position: relative;
-	
-	.gauche {
-		width: 150%;
-		transform: rotate(-5deg);
-		min-height: 115px;
-		background-image: url(../images/fond.png);
-		position: absolute;
-	}
-}
-
 
 
 /*------------------------ ACCUEIL -------------------------------*/
@@ -123,7 +111,8 @@ a {
 	position: relative;
 	width:100%;
 	overflow: hidden;
-	background: url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed;
+	background: url(../images/accueil-bas.png) center bottom no-repeat,
+	url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed;
 	
 	.accueil {
 		margin-top: 20%;
