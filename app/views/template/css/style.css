@@ -70,6 +70,15 @@ a {
   .scroll-down a {
     color: #fff; }
 
+.angle-bas-accueil {
+  position: relative; }
+  .angle-bas-accueil .gauche {
+    width: 150%;
+    transform: rotate(-5deg);
+    min-height: 115px;
+    background-image: url(../images/fond.png);
+    position: absolute; }
+
 /*------------------------ ACCUEIL -------------------------------*/
 #accueil {
   min-height: 100%;
@@ -77,14 +86,6 @@ a {
   width: 100%;
   overflow: hidden;
   background: url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed; }
-  #accueil .right {
-    width: 40%;
-    height: 100%;
-    background-color: #DE4344;
-    opacity: 0.8;
-    left: 60%;
-    top: 0;
-    position: absolute; }
   #accueil .accueil {
     margin-top: 20%;
     position: relative;
@@ -125,6 +126,14 @@ a {
           color: #242425; }
         #accueil .accueil .droite .texte h5 {
           margin-top: 11.5px; }
+  #accueil .right {
+    width: 40%;
+    height: 100%;
+    background-color: #DE4344;
+    opacity: 0.8;
+    left: 60%;
+    top: 0;
+    position: absolute; }
 
 .page-fond {
   min-height: 100%;

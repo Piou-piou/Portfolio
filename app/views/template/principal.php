@@ -8,10 +8,10 @@
 		<link rel="stylesheet" type="text/css" href="<?=WEBROOT?>libs/font_awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="<?=WEBROOT?>libs/font_awesome/css/animate.css">
 		<?php if ($config->getResponsive() == 1){?>
-			<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 			<link rel="stylesheet" type="text/css" href="<?=TPLWEBROOT?>css/foundation.css">
 			<link rel="stylesheet" type="text/css" href="<?=TPLWEBROOT?>css/nav-responsive.css">
-			<script src="<?=TPLWEBROOT?>js/nav-responsive.js"></script>
+			<!--<script src="<?/*=TPLWEBROOT*/?>js/nav-responsive.js"></script>-->
 		<?php } else {?>
 		<link rel="stylesheet" type="text/css" href="<?=LIBSWEBROOT?>reset_css/reset.css">
 		<?php } ?>
@@ -25,12 +25,12 @@
 
 		<?php echo $twig->render($page.".html", array_merge($arr, $constant)); ?>
 
-		<script>
+		<!--<script>
 			$(document).ready(function() {
 				$("div").each(function() {
 					$(this).removeAttr("contenteditable").blur();
 				})
 			})
-		</script>
+		</script>-->
 	</body>
 </html>
