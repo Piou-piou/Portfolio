@@ -74,22 +74,57 @@ a {
 #accueil {
   min-height: 100%;
   position: relative;
-  /*background-color: $clr-sec;*/
   width: 100%;
   overflow: hidden;
   background: url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed; }
-  #accueil .accueil h1, #accueil .accueil h2, #accueil .accueil h5 {
-    font-family: "open-extrabold";
-    font-weight: bolder;
-    text-align: center;
-    color: #E6E6E7; }
-  #accueil .accueil h1 {
-    margin-top: 30%; }
-  #accueil .accueil h5 {
-    font-family: "Raleway";
-    font-weight: normal; }
-  #accueil .accueil span {
-    color: #DE4344; }
+  #accueil .right {
+    width: 40%;
+    height: 100%;
+    background-color: #DE4344;
+    opacity: 0.8;
+    left: 60%;
+    top: 0;
+    position: absolute; }
+  #accueil .accueil {
+    margin-top: 20%;
+    position: relative;
+    z-index: 30; }
+    #accueil .accueil h1, #accueil .accueil h2, #accueil .accueil h5 {
+      font-family: "open-extrabold";
+      font-weight: bolder;
+      color: #E6E6E7; }
+    #accueil .accueil h1 {
+      font-size: 4.5rem; }
+    #accueil .accueil h2 {
+      font-size: 3.375rem; }
+    #accueil .accueil h5 {
+      font-family: "Raleway";
+      font-weight: normal;
+      font-size: 2.25rem; }
+    #accueil .accueil .gauche {
+      width: 60%;
+      float: left; }
+      #accueil .accueil .gauche .texte {
+        float: right;
+        padding-right: 10px; }
+        #accueil .accueil .gauche .texte h1 {
+          text-align: right;
+          color: #DE4344; }
+        #accueil .accueil .gauche .texte h5 {
+          float: right; }
+        #accueil .accueil .gauche .texte span {
+          color: #DE4344; }
+    #accueil .accueil .droite {
+      width: 40%;
+      float: left; }
+      #accueil .accueil .droite .texte {
+        padding-left: 10px; }
+        #accueil .accueil .droite .texte h1 {
+          color: #242425; }
+        #accueil .accueil .droite .texte span {
+          color: #242425; }
+        #accueil .accueil .droite .texte h5 {
+          margin-top: 11.5px; }
 
 .page-fond {
   min-height: 100%;
