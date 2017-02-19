@@ -178,7 +178,7 @@ a {
 .a-propos h2 {
   background: linear-gradient(#DE4344, #DE4344) no-repeat left bottom;
   background-size: 50% 3px;
-  margin-bottom: 1rem; }
+  margin-bottom: 1.5rem; }
 .a-propos .blog h3 {
   font-family: "open-extrabold";
   font-size: 1.5rem;
@@ -194,6 +194,14 @@ a {
   background-color: #DE4344;
   margin: 0.3rem 0.3rem 0.3rem 0;
   padding: 0.3rem; }
+.a-propos .blog .image {
+  overflow: hidden; }
+.a-propos .blog img {
+  transition: all 0.3s ease;
+  filter: grayscale(1); }
+.a-propos .blog a:hover img {
+  transform: scale(1.2);
+  filter: grayscale(0); }
 
 /*------------------------ MES COMPETENCES -------------------------------*/
 .competences .titre h5 {

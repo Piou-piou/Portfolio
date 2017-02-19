@@ -269,7 +269,7 @@ a {
 	h2 {
 		background: linear-gradient($clr-princ, $clr-princ) no-repeat left bottom;
 		background-size: 50% 3px;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
 	}
 	
 	.blog {
@@ -294,6 +294,22 @@ a {
 			background-color: $clr-princ;
 			margin: 0.3rem 0.3rem 0.3rem 0;
 			padding: 0.3rem;
+		}
+		
+		.image {
+			overflow: hidden;
+		}
+		
+		img {
+			transition: all 0.3s ease;
+			filter: grayscale(1);
+		}
+		
+		a:hover {
+			img {
+				transform: scale(1.2);
+				filter: grayscale(0);
+			}
 		}
 	}
 }
