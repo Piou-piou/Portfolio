@@ -111,8 +111,7 @@ a {
 	position: relative;
 	width:100%;
 	overflow: hidden;
-	background: url(../images/accueil-bas.png) center bottom no-repeat,
-	url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed;
+	background: url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed;
 	
 	.accueil {
 		margin-top: 20%;
@@ -202,10 +201,10 @@ a {
 	background-attachment: fixed;
 	background-color: $clr-sec;
 	width:100%;
-	overflow: hidden;
 
 	&.fond-portfolio {
 		padding-bottom: 150px;
+		overflow: hidden;
 	}
 }
 
@@ -221,7 +220,7 @@ a {
 
 /*------------------------ GLOBAL -------------------------------*/
 .a-propos, .competences, .portfolio, .contact {
-	margin-bottom: 100px;
+	padding-bottom: 100px;
 
 	.titre {
 		text-align: center;
@@ -251,6 +250,16 @@ a {
 
 /*------------------------ A PROPOS -------------------------------*/
 .a-propos {
+	&:before {
+		background: url(../images/accueil-bas.png) center top no-repeat;
+		position: absolute;
+		height: 150px;
+		width: 100%;
+		top: -120px;
+		content: " ";
+	}
+	
+	
 	.lien-cv {
 		display: inline-block;
 		padding: 1rem;

@@ -76,7 +76,7 @@ a {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: url(../images/accueil-bas.png) center bottom no-repeat, url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed; }
+  background: url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed; }
   #accueil .accueil {
     margin-top: 20%;
     position: relative;
@@ -132,10 +132,10 @@ a {
   background-image: url(../images/fond.png);
   background-attachment: fixed;
   background-color: #242425;
-  width: 100%;
-  overflow: hidden; }
+  width: 100%; }
   .page-fond.fond-portfolio {
-    padding-bottom: 150px; }
+    padding-bottom: 150px;
+    overflow: hidden; }
 
 .page-couleur {
   min-height: 100%;
@@ -147,7 +147,7 @@ a {
 
 /*------------------------ GLOBAL -------------------------------*/
 .a-propos, .competences, .portfolio, .contact {
-  margin-bottom: 100px; }
+  padding-bottom: 100px; }
   .a-propos .titre, .competences .titre, .portfolio .titre, .contact .titre {
     text-align: center; }
     .a-propos .titre h1, .competences .titre h1, .portfolio .titre h1, .contact .titre h1 {
@@ -164,6 +164,13 @@ a {
     color: #FFFFFF; }
 
 /*------------------------ A PROPOS -------------------------------*/
+.a-propos:before {
+  background: url(../images/accueil-bas.png) center top no-repeat;
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  top: -120px;
+  content: " "; }
 .a-propos .lien-cv {
   display: inline-block;
   padding: 1rem;
