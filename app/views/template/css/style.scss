@@ -250,13 +250,29 @@ a {
 }
 
 /*------------------------ A PROPOS -------------------------------*/
-@media screen and (max-width: 1025px) {
-	.a-propos {
-		.iphone {
-			display: none;
+.a-propos {
+	.lien-cv {
+		display: inline-block;
+		padding: 1rem;
+		border: 3px solid $clr-princ;
+		margin-top: 1rem;
+		color: #FFFFFF;
+		background: linear-gradient($clr-princ, $clr-princ) no-repeat left bottom;
+		background-size: 100% 0%;
+		transition: background 0.3s ease;
+		
+		&:hover {
+			background-size: 100% 100%;
 		}
 	}
+	
+	h2 {
+		background: linear-gradient($clr-princ, $clr-princ) no-repeat left bottom;
+		background-size: 50% 3px;
+		margin-bottom: 1rem;
+	}
 }
+
 
 
 /*------------------------ MES COMPETENCES -------------------------------*/
