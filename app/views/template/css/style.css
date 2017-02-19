@@ -179,6 +179,21 @@ a {
   background: linear-gradient(#DE4344, #DE4344) no-repeat left bottom;
   background-size: 50% 3px;
   margin-bottom: 1rem; }
+.a-propos .blog h3 {
+  font-family: "open-extrabold";
+  font-size: 1.5rem;
+  margin-bottom: 0; }
+.a-propos .blog h5 {
+  font-family: "Raleway";
+  font-size: 1rem;
+  margin-top: 0; }
+.a-propos .blog p {
+  margin-bottom: 1rem; }
+.a-propos .blog .categories {
+  float: left;
+  background-color: #DE4344;
+  margin: 0.3rem 0.3rem 0.3rem 0;
+  padding: 0.3rem; }
 
 /*------------------------ MES COMPETENCES -------------------------------*/
 .competences .titre h5 {

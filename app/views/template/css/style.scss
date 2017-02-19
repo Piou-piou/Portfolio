@@ -271,6 +271,31 @@ a {
 		background-size: 50% 3px;
 		margin-bottom: 1rem;
 	}
+	
+	.blog {
+		h3 {
+			font-family: $police-ters;
+			font-size: 1.5rem;
+			margin-bottom: 0;
+		}
+		
+		h5 {
+			font-family: $police-princ;
+			font-size: 1rem;
+			margin-top: 0;
+		}
+		
+		p {
+			margin-bottom: 1rem;
+		}
+		
+		.categories {
+			float: left;
+			background-color: $clr-princ;
+			margin: 0.3rem 0.3rem 0.3rem 0;
+			padding: 0.3rem;
+		}
+	}
 }
 
 
