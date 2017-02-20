@@ -52,6 +52,12 @@ a {
   width: 100%;
   overflow: hidden;
   background: url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed; }
+  @media screen and (max-width: 1200px) {
+    #accueil {
+      min-height: 90%; } }
+  @media screen and (max-width: 850px) {
+    #accueil {
+      min-height: 75%; } }
   #accueil .accueil {
     margin-top: 20%;
     position: relative;
@@ -146,7 +152,7 @@ a {
       left: 50%; } }
 
 .page-fond {
-  min-height: 100%;
+  /*min-height: 100%;*/
   position: relative;
   background-image: url(../images/fond.png);
   background-attachment: fixed;
@@ -157,7 +163,7 @@ a {
     overflow: hidden; }
 
 .page-couleur {
-  min-height: 100%;
+  /*min-height: 100%;*/
   position: relative;
   background-color: #DE4344;
   background-attachment: fixed;

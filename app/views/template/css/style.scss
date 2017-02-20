@@ -75,6 +75,14 @@ a {
 	overflow: hidden;
 	background: url(../images/bg-accueil1.jpg) 50% 0% no-repeat fixed;
 	
+	@media screen and (max-width: 1200px) {
+		min-height: 90%;
+	}
+	
+	@media screen and (max-width: 850px) {
+		min-height: 75%;
+	}
+	
 	.accueil {
 		margin-top: 20%;
 		position: relative;
@@ -244,7 +252,7 @@ a {
 }
 
 .page-fond {
-	min-height: 100%;
+	/*min-height: 100%;*/
 	position: relative;
 	background-image: url(../images/fond.png);
 	background-attachment: fixed;
@@ -258,7 +266,7 @@ a {
 }
 
 .page-couleur {
-	min-height: 100%;
+	/*min-height: 100%;*/
 	position: relative;
 	background-color: $clr-princ;
 	background-attachment: fixed;
