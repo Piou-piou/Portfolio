@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".nav-responsive i").click(function(e) {
+    jQuery(".nav-responsive i").click(function(e) {
         e.preventDefault();
         $this = $(this).parent();
 
