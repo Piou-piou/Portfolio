@@ -530,17 +530,25 @@ a {
 	}
 
 	.submit {
-		background: $clr-sec;
+		/*background: $clr-sec;*/
 		border: 2px solid $clr-sec;
 		color: #fff;
 		font-family: $police-princ;
 		font-size: 1rem;
 		font-weight: bold;
 		transition: 0.3s;
+		background: linear-gradient($clr-sec, $clr-sec) no-repeat left bottom,
+					linear-gradient($clr-sec, $clr-sec) no-repeat right top;
+		background-size: 50% 0%, 50% 0%;
 
-		&:hover {
+		/*&:hover {
 			background: transparent;
 			border: 2px solid $clr-fond-clr;
+			cursor: pointer;
+		}*/
+		
+		&:hover {
+			background-size: 50% 100%, 50% 100%;
 			cursor: pointer;
 		}
 	}

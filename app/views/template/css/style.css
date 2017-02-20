@@ -340,16 +340,22 @@ a {
   min-height: 226px;
   resize: vertical; }
 .contact .submit {
-  background: #242425;
+  /*background: $clr-sec;*/
   border: 2px solid #242425;
   color: #fff;
   font-family: "Raleway";
   font-size: 1rem;
   font-weight: bold;
-  transition: 0.3s; }
+  transition: 0.3s;
+  background: linear-gradient(#242425, #242425) no-repeat left bottom, linear-gradient(#242425, #242425) no-repeat right top;
+  background-size: 50% 0%, 50% 0%;
+  /*&:hover {
+  	background: transparent;
+  	border: 2px solid $clr-fond-clr;
+  	cursor: pointer;
+  }*/ }
   .contact .submit:hover {
-    background: transparent;
-    border: 2px solid #ffb1b1;
+    background-size: 50% 100%, 50% 100%;
     cursor: pointer; }
 
 @media screen and (max-width: 1025px) {
