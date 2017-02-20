@@ -540,12 +540,6 @@ a {
 		background: linear-gradient($clr-sec, $clr-sec) no-repeat left bottom,
 					linear-gradient($clr-sec, $clr-sec) no-repeat right top;
 		background-size: 50% 0%, 50% 0%;
-
-		/*&:hover {
-			background: transparent;
-			border: 2px solid $clr-fond-clr;
-			cursor: pointer;
-		}*/
 		
 		&:hover {
 			background-size: 50% 100%, 50% 100%;
