@@ -336,7 +336,6 @@ a {
 		top: -100px;
 		content: " ";
 		left: 0;
-		z-index: 0;
 	}
 	
 	&:after {
@@ -526,6 +525,16 @@ a {
 
 /*------------------------ CONTACT -------------------------------*/
 .contact {
+	&:before {
+		background: url(../images/contact.png) center top no-repeat;
+		position: absolute;
+		height: 115px;
+		width: 100%;
+		top: -110px;
+		content: " ";
+		left: 0;
+	}
+	
 	.titre {
 		h5 {
 			color: #fff;
