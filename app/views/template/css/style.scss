@@ -339,6 +339,16 @@ a {
 		z-index: 0;
 	}
 	
+	&:after {
+		background: url(../images/haut-portfolio.png) center top no-repeat;
+		position: absolute;
+		height: 150px;
+		width: 100%;
+		bottom: 0;
+		content: " ";
+		left: 0;
+	}
+	
 	.titre {
 		h5 {
 			color: #fff;
@@ -355,14 +365,14 @@ a {
 		margin-bottom: 0.5rem;
 	}
 
-	.bloc {
+	/*.bloc {
 		color: $clr-fond-clr;
 		border: 2px solid $clr-fond-clr;
 		min-height: 456px;
 		text-align: left;
 
 		i {
-			/*margin-left: 34%;*/
+			!*margin-left: 34%;*!
 			margin-top: 0.2rem;
 		}
 
@@ -386,7 +396,7 @@ a {
 			margin: 0 0.5rem;
 			width: 32.29%;
 		}
-	}
+	}*/
 }
 
 
