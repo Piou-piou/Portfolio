@@ -214,7 +214,7 @@ a {
 	background-color: $clr-princ;
 	background-attachment: fixed;
 	width:100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 
@@ -250,6 +250,8 @@ a {
 
 /*------------------------ A PROPOS -------------------------------*/
 .a-propos {
+	padding-bottom: 150px;
+	
 	&:before {
 		background: url(../images/accueil-bas.png) center top no-repeat;
 		position: absolute;
@@ -258,7 +260,6 @@ a {
 		top: -120px;
 		content: " ";
 	}
-	
 	
 	.lien-cv {
 		display: inline-block;
@@ -327,6 +328,17 @@ a {
 
 /*------------------------ MES COMPETENCES -------------------------------*/
 .competences {
+	&:before {
+		background: url(../images/competences.png) center top no-repeat;
+		position: absolute;
+		height: 115px;
+		width: 100%;
+		top: -100px;
+		content: " ";
+		left: 0;
+		z-index: 0;
+	}
+	
 	.titre {
 		h5 {
 			color: #fff;
@@ -335,6 +347,12 @@ a {
 				color: $clr-sec;
 			}
 		}
+	}
+	
+	img {
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 0.5rem;
 	}
 
 	.bloc {
