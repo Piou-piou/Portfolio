@@ -152,7 +152,6 @@ a {
       left: 50%; } }
 
 .page-fond {
-  /*min-height: 100%;*/
   position: relative;
   background-image: url(../images/fond.png);
   background-attachment: fixed;
@@ -163,12 +162,10 @@ a {
     overflow: hidden; }
 
 .page-couleur {
-  /*min-height: 100%;*/
   position: relative;
   background-color: #DE4344;
   background-attachment: fixed;
-  width: 100%;
-  /*overflow: hidden;*/ }
+  width: 100%; }
 
 /*------------------------ GLOBAL -------------------------------*/
 .a-propos, .competences, .portfolio, .contact {
@@ -270,7 +267,8 @@ a {
   .portfolio .projets > div:hover .masque {
     /*display: block;*/
     opacity: 100;
-    transition: 0.3s all ease; }
+    transition: 0.3s all ease;
+    cursor: pointer; }
     .portfolio .projets > div:hover .masque h2 {
       margin-top: 0;
       transition: 0.3s; }

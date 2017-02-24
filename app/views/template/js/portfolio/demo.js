@@ -11,7 +11,7 @@ var demo = (function(window, undefined) {
   var SELECTORS = {
     pattern: '.pattern',
     card: '.projets > div',
-    cardImage: '.projets > div .suite',
+    cardImage: '.projets > div .suite, .projets > div .masque',
     cardClose: '.card__btn-close',
   };
 

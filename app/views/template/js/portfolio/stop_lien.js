@@ -16,7 +16,7 @@ jQuery(document).ready(function() {
         });
     });
 
-    jQuery(".projet img").click(function(e) {
+    jQuery(".projets div img, .projets  div .masque").click(function(e) {
         e.preventDefault();
 
         jQuery(".card__content").css({"display": "block"});

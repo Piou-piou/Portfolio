@@ -252,7 +252,6 @@ a {
 }
 
 .page-fond {
-	/*min-height: 100%;*/
 	position: relative;
 	background-image: url(../images/fond.png);
 	background-attachment: fixed;
@@ -266,12 +265,10 @@ a {
 }
 
 .page-couleur {
-	/*min-height: 100%;*/
 	position: relative;
 	background-color: $clr-princ;
 	background-attachment: fixed;
 	width:100%;
-	/*overflow: hidden;*/
 }
 
 
@@ -436,6 +433,7 @@ a {
 					/*display: block;*/
 					opacity: 100;
 					transition: 0.3s all ease;
+					cursor: pointer;
 
 					h2 {
 						margin-top: 0;
