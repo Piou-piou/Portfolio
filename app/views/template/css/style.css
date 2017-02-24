@@ -59,9 +59,36 @@ a {
     #accueil {
       min-height: 75%; } }
   #accueil .accueil {
-    margin-top: 20%;
+    margin-top: 10%;
     position: relative;
     z-index: 30; }
+    #accueil .accueil nav {
+      padding-bottom: 10%; }
+      #accueil .accueil nav a {
+        color: #fff;
+        display: block;
+        height: 100%;
+        padding: 10px;
+        transition: all 0.3s ease; }
+      #accueil .accueil nav ul li {
+        display: inline-block;
+        list-style: none; }
+      #accueil .accueil nav .gauche ul {
+        background-color: #DE4344; }
+      #accueil .accueil nav .gauche a:hover {
+        background-color: #242425; }
+      #accueil .accueil nav .gauche .texte {
+        margin: 0;
+        padding: 0; }
+      #accueil .accueil nav .droite ul {
+        background-color: #242425;
+        margin-left: 0;
+        display: inline-block; }
+      #accueil .accueil nav .droite a:hover {
+        background-color: #DE4344; }
+      #accueil .accueil nav .droite .texte {
+        margin: 0;
+        padding: 0; }
     #accueil .accueil h1, #accueil .accueil h2, #accueil .accueil h5 {
       font-family: "open-extrabold";
       font-weight: bolder;

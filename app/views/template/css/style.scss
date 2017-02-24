@@ -84,9 +84,60 @@ a {
 	}
 	
 	.accueil {
-		margin-top: 20%;
+		margin-top: 10%;
 		position: relative;
 		z-index: 30;
+		
+		nav {
+			padding-bottom: 10%;
+			
+			a {
+				color: #fff;
+				display: block;
+				height: 100%;
+				padding: 10px;
+				transition: all 0.3s ease;
+			}
+			
+			ul {
+				li {
+					display: inline-block;
+					list-style: none;
+				}
+			}
+			
+			.gauche {
+				ul {
+					background-color: $clr-princ;
+				}
+				
+				a:hover {
+					background-color: $clr-sec;
+				}
+				
+				.texte {
+					margin: 0;
+					padding: 0;
+				}
+			}
+			
+			.droite {
+				ul {
+					background-color: $clr-sec;
+					margin-left: 0;
+					display: inline-block;
+				}
+				
+				a:hover {
+					background-color: $clr-princ;
+				}
+				
+				.texte {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
 		
 		h1, h2, h5 {
 			font-family: $police-ters;
