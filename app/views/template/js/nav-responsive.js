@@ -1,7 +1,7 @@
 $(document).ready(function() {
     jQuery(".nav-responsive i").click(function(e) {
         e.preventDefault();
-        $this = $(this).parent();
+        $this = jQuery(this).parent();
 
         $this.toggleClass("active");
 

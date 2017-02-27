@@ -63,7 +63,8 @@ a {
     position: relative;
     z-index: 30; }
     #accueil .accueil nav {
-      padding-bottom: 10%; }
+      padding-bottom: 10%;
+      display: none; }
       #accueil .accueil nav a {
         color: #fff;
         display: block;
@@ -104,6 +105,9 @@ a {
       #accueil .accueil nav .droite .texte {
         margin: 0;
         padding: 0; }
+    @media screen and (min-width: 701px) {
+      #accueil .accueil nav {
+        display: block; } }
     #accueil .accueil h1, #accueil .accueil h2, #accueil .accueil h5 {
       font-family: "open-extrabold";
       font-weight: bolder;

@@ -90,6 +90,7 @@ a {
 		
 		nav {
 			padding-bottom: 10%;
+			display: none;
 			
 			a {
 				color: #fff;
@@ -159,6 +160,12 @@ a {
 					margin: 0;
 					padding: 0;
 				}
+			}
+		}
+		
+		@media screen and (min-width: 701px) {
+			nav {
+				display: block;
 			}
 		}
 		
