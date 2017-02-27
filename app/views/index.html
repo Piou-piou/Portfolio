@@ -137,17 +137,12 @@
 								<h5>{{ i.publication_date }} posté par {{ i.pseudo }}</h5>
 							</a>
 							
-							<p>
-								{{ i.article }}
-							</p>
+							{#{{ i.article }}#}article
 						</div>
 	
 						{% for x in i.categories %}
 							<div class="categories"><a href="{{ WEBROOT }}blog/category/{{ x.category }}">{{ x.category }}</a></div>
 						{% endfor %}
-						
-						
-						{{ i.article }}
 					</article>
 				{% endfor %}
 			{% else %}

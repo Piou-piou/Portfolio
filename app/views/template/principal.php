@@ -24,6 +24,8 @@
 				require_once(ROOT."app/views/template/navigation.php");
 				if ($config->getResponsive() == 1) require_once(ROOT."app/views/template/nav_responsive.php");
 			}
+			
+			require_once(ROOT."app/controller/initialise_blog.php");
 		?>
 		
 		
