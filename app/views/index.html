@@ -124,6 +124,40 @@
 		</div>
 		
 		<div class="row blog">
+			{% if blog.articles is iterable %}
+				{% for i in blog.articles %}
+					<article class="small-12 medium-4 columns">
+						<div class="small-12">
+							<a href="{{ WEBROOT }}blog/article/{{ i.url }}" title="{{ i.title }}">
+								<div class="image">
+									<img src="{{ i.image }}" alt="Image article{{ i.title }} ">
+								</div>
+								
+								<h3>{{ i.title }}</h3>
+								<h5>{{ i.publication_date }} posté par {{ i.pseudo }}</h5>
+							</a>
+							
+							<p>
+								{{ i.article }}
+							</p>
+						</div>
+	
+						{% for x in i.categories %}
+							<div class="categories"><a href="{{ WEBROOT }}blog/category/{{ x.category }}">{{ x.category }}</a></div>
+						{% endfor %}
+						
+						
+						{{ i.article }}
+					</article>
+				{% endfor %}
+			{% else %}
+				<div class="small-12 columns">
+					<p class="small-12">Il n'y a encore pas d'article de blog pour le moment, ils vont arriver sous peu.</p>
+				</div>
+			{% endif %}
+		</div>
+		
+		<div class="row blog">
 			<div class="small-12 medium-4 columns">
 				<div class="small-12">
 					<a href="">

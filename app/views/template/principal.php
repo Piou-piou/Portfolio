@@ -25,10 +25,10 @@
 				if ($config->getResponsive() == 1) require_once(ROOT."app/views/template/nav_responsive.php");
 			}
 		?>
-
-
-		<?php echo $twig->render($page.".html", array_merge($arr, $constant)); ?>
-
+		
+		
+		<?php echo $twig->render($page.".html", array_merge(array_merge(array_merge($arr, $constant), $_REQUEST), $_SESSION)); ?>
+		
 		<script>
 			jQuery(document).ready(function() {
                 jQuery("div").each(function() {
