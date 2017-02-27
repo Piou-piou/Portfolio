@@ -123,7 +123,7 @@
 			</div>
 		</div>
 		
-		<div class="row blog">
+		{#<div class="row blog">
 			{% if blog.articles is iterable %}
 				{% for i in blog.articles %}
 					<article class="small-12 medium-4 columns">
@@ -134,10 +134,10 @@
 								</div>
 								
 								<h3>{{ i.title }}</h3>
-								<h5>{{ i.publication_date }} posté par {{ i.pseudo }}</h5>
+								<h5>Posté par {{ i.pseudo }} | {{ i.publication_date }} </h5>
 							</a>
 							
-							{#{{ i.article }}#}article
+							#}{#{{ i.article }}#}{#article
 						</div>
 	
 						{% for x in i.categories %}
@@ -150,7 +150,7 @@
 					<p class="small-12">Il n'y a encore pas d'article de blog pour le moment, ils vont arriver sous peu.</p>
 				</div>
 			{% endif %}
-		</div>
+		</div>#}
 		
 		<div class="row blog">
 			<div class="small-12 medium-4 columns">
