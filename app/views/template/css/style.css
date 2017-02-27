@@ -68,15 +68,24 @@ a {
         color: #fff;
         display: block;
         height: 100%;
-        padding: 10px;
+        padding: 20px;
+        margin-right: -10px;
         transition: all 0.3s ease; }
-      #accueil .accueil nav ul li {
-        display: inline-block;
-        list-style: none; }
+      #accueil .accueil nav ul {
+        padding-right: 10px; }
+        #accueil .accueil nav ul li {
+          display: inline-block;
+          list-style: none; }
       #accueil .accueil nav .gauche ul {
         background-color: #DE4344; }
+      #accueil .accueil nav .gauche a {
+        background: linear-gradient(#242425, #242425) no-repeat left bottom;
+        background-size: 100% 0%; }
+        #accueil .accueil nav .gauche a.haut {
+          background: linear-gradient(#242425, #242425) no-repeat left top;
+          background-size: 100% 0%; }
       #accueil .accueil nav .gauche a:hover {
-        background-color: #242425; }
+        background-size: 100% 100%; }
       #accueil .accueil nav .gauche .texte {
         margin: 0;
         padding: 0; }
@@ -84,8 +93,14 @@ a {
         background-color: #242425;
         margin-left: 0;
         display: inline-block; }
+      #accueil .accueil nav .droite a {
+        background: linear-gradient(#DE4344, #DE4344) no-repeat left bottom;
+        background-size: 100% 0%; }
+        #accueil .accueil nav .droite a.haut {
+          background: linear-gradient(#DE4344, #DE4344) no-repeat left top;
+          background-size: 100% 0%; }
       #accueil .accueil nav .droite a:hover {
-        background-color: #DE4344; }
+        background-size: 100% 100%; }
       #accueil .accueil nav .droite .texte {
         margin: 0;
         padding: 0; }

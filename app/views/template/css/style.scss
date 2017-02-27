@@ -95,11 +95,14 @@ a {
 				color: #fff;
 				display: block;
 				height: 100%;
-				padding: 10px;
+				padding: 20px;
+				margin-right: -10px;
 				transition: all 0.3s ease;
 			}
 			
 			ul {
+				padding-right: 10px;
+				
 				li {
 					display: inline-block;
 					list-style: none;
@@ -111,8 +114,18 @@ a {
 					background-color: $clr-princ;
 				}
 				
+				a {
+					background: linear-gradient($clr-sec, $clr-sec) no-repeat left bottom;
+					background-size: 100% 0%;
+					
+					&.haut {
+						background: linear-gradient($clr-sec, $clr-sec) no-repeat left top;
+						background-size: 100% 0%;
+					}
+				}
+				
 				a:hover {
-					background-color: $clr-sec;
+					background-size: 100% 100%;
 				}
 				
 				.texte {
@@ -128,8 +141,18 @@ a {
 					display: inline-block;
 				}
 				
+				a {
+					background: linear-gradient($clr-princ, $clr-princ) no-repeat left bottom;
+					background-size: 100% 0%;
+					
+					&.haut {
+						background: linear-gradient($clr-princ, $clr-princ) no-repeat left top;
+						background-size: 100% 0%;
+					}
+				}
+				
 				a:hover {
-					background-color: $clr-princ;
+					background-size: 100% 100%;
 				}
 				
 				.texte {
