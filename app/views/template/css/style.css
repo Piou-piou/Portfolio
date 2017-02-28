@@ -271,8 +271,11 @@ a {
     background-color: #DE4344;
     margin: 0.3rem 0.3rem 0.3rem 0;
     padding: 0.3rem; }
+    .a-propos .blog .categories a {
+      color: #c4c4c4; }
   .a-propos .blog .image {
-    overflow: hidden; }
+    overflow: hidden;
+    max-height: 240px; }
   .a-propos .blog img {
     transition: all 0.3s ease;
     filter: grayscale(1); }

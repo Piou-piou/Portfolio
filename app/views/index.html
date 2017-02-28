@@ -123,7 +123,7 @@
 			</div>
 		</div>
 		
-		{#<div class="row blog">
+		<div class="row blog">
 			{% if blog.articles is iterable %}
 				{% for i in blog.articles %}
 					<article class="small-12 medium-4 columns">
@@ -137,7 +137,7 @@
 								<h5>Posté par {{ i.pseudo }} | {{ i.publication_date }} </h5>
 							</a>
 							
-							#}{#{{ i.article }}#}{#article
+							<p>{{ i.article }}</p>
 						</div>
 	
 						{% for x in i.categories %}
@@ -150,67 +150,6 @@
 					<p class="small-12">Il n'y a encore pas d'article de blog pour le moment, ils vont arriver sous peu.</p>
 				</div>
 			{% endif %}
-		</div>#}
-		
-		<div class="row blog">
-			<div class="small-12 medium-4 columns">
-				<div class="small-12">
-					<a href="">
-						<div class="image">
-							<img src="{{ TPLWEBROOT }}images/blog.png" alt="Ruined World">
-						</div>
-						
-						<h3>Ruined World, les factions</h3>
-						<h5>Posté par Anthony | 19 février 2017</h5>
-					</a>
-					
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been. Lorem Ipsum is simply...
-					</p>
-				</div>
-				
-				<div class="categories">Devblog</div>
-				<div class="categories">ACS</div>
-				<div class="categories">Veille</div>
-			</div>
-			<div class="small-12 medium-4 columns">
-				<div class="small-12">
-					<a href="">
-						<div class="image">
-							<img src="{{ TPLWEBROOT }}images/blog.png" alt="Ruined World">
-						</div>
-						<h3>Ruined World, les factions</h3>
-						<h5>Posté par Anthony | 19 février 2017</h5>
-					</a>
-					
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been. Lorem Ipsum is simply...
-					</p>
-				</div>
-				
-				<div class="categories">Devblog</div>
-				<div class="categories">ACS</div>
-				<div class="categories">Veille</div>
-			</div>
-			<div class="small-12 medium-4 columns">
-				<div class="small-12">
-					<a href="">
-						<div class="image">
-							<img src="{{ TPLWEBROOT }}images/blog.png" alt="Ruined World">
-						</div>
-						<h3>Ruined World, les factions</h3>
-						<h5>Posté par Anthony | 19 février 2017</h5>
-					</a>
-					
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been. Lorem Ipsum is simply...
-					</p>
-				</div>
-				
-				<div class="categories">Devblog</div>
-				<div class="categories">ACS</div>
-				<div class="categories">Veille</div>
-			</div>
 		</div>
 	</div>
 </div>

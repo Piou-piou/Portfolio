@@ -439,10 +439,15 @@ a {
 			background-color: $clr-princ;
 			margin: 0.3rem 0.3rem 0.3rem 0;
 			padding: 0.3rem;
+			
+			a {
+				color: $clr-txt;
+			}
 		}
 		
 		.image {
 			overflow: hidden;
+			max-height: 240px;
 		}
 		
 		img {
