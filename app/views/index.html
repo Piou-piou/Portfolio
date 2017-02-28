@@ -141,7 +141,7 @@
 						</div>
 	
 						{% for x in i.categories %}
-							<div class="categories"><a href="{{ WEBROOT }}blog/category/{{ x.category }}">{{ x.category }}</a></div>
+							<div class="categories"><a href="{{ WEBROOT }}blog/category/{{ x.url_category }}">{{ x.category }}</a></div>
 						{% endfor %}
 					</article>
 				{% endfor %}
