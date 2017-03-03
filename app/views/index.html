@@ -137,7 +137,7 @@
 								<h5>Posté par {{ i.pseudo }} | {{ i.publication_date }} </h5>
 							</a>
 							
-							<p>{{ i.article }}</p>
+							<p>{{ i.article|raw }}</p>
 						</div>
 	
 						{% for x in i.categories %}
