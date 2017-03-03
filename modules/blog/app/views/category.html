@@ -1,0 +1,27 @@
+{#this page show only all articles of one category#}
+{% for i in blog.articles %}
+	<article>
+		<img src="{{ i.image }}" alt="Image article{{ i.title }} ">
+		<h2>{{ i.title }}</h2>
+		<h3>{{ i.publication_date }} posté par {{ i.pseudo }}</h3>
+		
+		<ul>
+			{% for x in i.categories %}
+				<li><a href="{{ WEBROOT }}blog/category/{{ x.url_category }}">{{ x.category }}</a></li>
+			{% endfor %}
+		</ul>
+		
+		{{ i.article|raw }}
+		
+		<a href="{{ WEBROOT }}blog/article/{{ i.url }}">Lire la suite</a>
+	</article>
+{% endfor %}
+
+{% if blog.categories_list is iterable %}
+	<h3>Categories list</h3>
+	<ul>
+		{% for i in blog.categories_list %}
+			<li><a href="{{ WEBROOT }}blog/category/{{ i.url_category }}">{{ i.category }}</a></li>
+		{% endfor %}
+	</ul>
+{% endif %}

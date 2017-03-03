@@ -1,0 +1,43 @@
+{% include("header.html") %}
+
+<nav class="nav-page">
+	<div class="inner">
+		<ul>
+			<li><a href="blog">Tous</a></li>
+			<li><a href="blog?id_state=1">Publié(s)</a></li>
+			<li><a href="blog?id_state=2">Brouillon(s)</a></li>
+			<li><a href="blog?id_state=4">Corbeille</a></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="inner">
+	<div class="added-module">
+		{% for i in blog.articles %}
+			<div class="bloc">
+				<div class="image">
+					<img src="{{ i.image }}" alt="">
+				</div>
+				<div class="categorie">
+					<ul>
+						{% for x in i.categories %}
+							<li>{{ x.category }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				
+				<h2>{{ i.title }}</h2>
+				<h3>{{ i.publication_date }} par {{ i.pseudo }}</h3>
+				
+				<h4>Etat de l'article : {{ i.state }}</h4>
+				
+				<a class="modifier" href="{{ ADMWEBROOT }}modules/blog/edit-article/{{ i.url }}">Modifier l'article</a>
+				{% if i.id_state == 4 %}
+					<a class="supprimer open-popup" popup="popup-delete-article" href="{{ ADMWEBROOT }}controller/modules/blog/article/delete.php?id_article={{ i.id_article }}">Supprimer l'article</a>
+				{% else %}
+					<a class="supprimer open-popup" popup="popup-trash-article" href="{{ ADMWEBROOT }}controller/modules/blog/article/add_trash.php?id_article={{ i.id_article }}">Archiver l'article</a>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+</div>

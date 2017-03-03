@@ -9,7 +9,6 @@ vendor/*
 **/.sass-cache/*
 .sass-cache/
 *.scssc
-modules/*
 *.ini
 *.lock
 !modules/creer-module.md

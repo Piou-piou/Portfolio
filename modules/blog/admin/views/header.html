@@ -1,0 +1,70 @@
+<header>
+    <div class="inner">
+        <h1>Gestion du blog</h1>
+    </div>
+</header>
+<nav class="nav-page">
+	<div class="inner">
+		<ul>
+			<li><a href="">Articles</a>
+				<ul>
+					<li><a href="{{ ADMWEBROOT }}modules/blog/add-article">Ajouter un article</a></li>
+					<li><a href="{{ ADMWEBROOT }}modules/blog">Modifier un article</a></li>
+					<li><a href="{{ ADMWEBROOT }}modules/blog">Liste des articles</a></li>
+				</ul>
+			</li>
+			<li><a href="">Catégories</a>
+				<ul>
+					<li><a href="{{ ADMWEBROOT }}modules/blog/add-category">Ajouter une catégorie</a></li>
+					<li><a href="{{ ADMWEBROOT }}modules/blog/list-categories">Modifier une catégorie</a></li>
+					<li><a href="{{ ADMWEBROOT }}modules/blog/list-categories">Liste des catégories</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+
+<div class="popup" id="popup-delete-article">
+    <div class="content">
+        <h2>Etes-vous sûr de vouloir supprimer cet article ?</h2>
+        <p>Si vous le supprimez, tous les commentaires qui y sont associés seront supprimés ainsi que l'article et son contenu textuel.<br/>
+           Les images qui le compose seront quant à elle sauvegardées.
+        </p>
+        
+        <div class="lien">
+            <a class="annuler">Annuler</a>
+            <a href="" class="valider">Valider</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="popup" id="popup-trash-article">
+	<div class="content">
+		<h2>Etes-vous sûr de vouloir archiver cet article ?</h2>
+		<p>Si vous l'archivez il ne sera plus visible dans la partie publique du site mais vous pourrez toujours y accéder dans l'administration soit pour le
+		   supprimer définitivement ou pour le rendre à nouveau visible.
+		</p>
+		
+		<div class="lien">
+			<a class="annuler">Annuler</a>
+			<a href="" class="valider">Valider</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="popup" id="popup-delete-category">
+    <div class="content">
+        <h2>Etes-vous sûr de vouloir supprimer cette catégorie ?</h2>
+        <p>Si vous la supprimée, tous les articles qui y sont associés ne le seront plus.<br/>
+        </p>
+        
+        <div class="lien">
+            <a class="annuler">Annuler</a>
+            <a href="" class="valider">Valider</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
