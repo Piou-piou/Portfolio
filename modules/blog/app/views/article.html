@@ -1,22 +1,26 @@
-{#this page display one article#}
-<article>
-	<h2>{{ blog.article.title }}</h2>
-	<h3>{{ blog.article.publication_date }} posté par {{ blog.article.pseudo }}</h3>
-	
-	<ul>
-		{% for i in blog.article.categories %}
-			<li><a href="{{ WEBROOT }}blog/category/{{ i.url_category }}">{{ i.category }}</a></li>
-		{% endfor %}
-	</ul>
-	
-	{{ blog.article.article|raw }}
-</article>
-
-{% if blog.categories_list is iterable %}
-	<h3>Categories list</h3>
-	<ul>
-		{% for i in blog.categories_list %}
-			<li><a href="{{ WEBROOT }}blog/category/{{ i.url_category }}">{{ i.category }}</a></li>
-		{% endfor %}
-	</ul>
-{% endif %}
+<div class="page-fond blog">
+	<div class="row">
+		<article>
+			<h2>{{ blog.article.title }}</h2>
+			<h3>{{ blog.article.publication_date }} posté par {{ blog.article.pseudo }}</h3>
+			
+			<ul>
+				{% for i in blog.article.categories %}
+					<li><a href="{{ WEBROOT }}blog/category/{{ i.url_category }}">{{ i.category }}</a></li>
+				{% endfor %}
+			</ul>
+			
+			{{ blog.article.article|raw }}
+		</article>
+	</div>
+	<div class="row">
+		{% if blog.categories_list is iterable %}
+			<h3>Categories list</h3>
+			<ul>
+				{% for i in blog.categories_list %}
+					<li><a href="{{ WEBROOT }}blog/category/{{ i.url_category }}">{{ i.category }}</a></li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
+</div>

@@ -416,52 +416,6 @@ a {
 		background-size: 50% 3px;
 		margin-bottom: 1.5rem;
 	}
-	
-	.blog {
-		h3 {
-			font-family: $police-ters;
-			font-size: 1.5rem;
-			margin-bottom: 0;
-		}
-		
-		h5 {
-			font-family: $police-princ;
-			font-size: 1rem;
-			margin-top: 0;
-		}
-		
-		p {
-			margin-bottom: 1rem;
-		}
-		
-		.categories {
-			float: left;
-			background-color: $clr-princ;
-			margin: 0.3rem 0.3rem 0.3rem 0;
-			padding: 0.3rem;
-			
-			a {
-				color: $clr-txt;
-			}
-		}
-		
-		.image {
-			overflow: hidden;
-			max-height: 240px;
-		}
-		
-		img {
-			transition: all 0.3s ease;
-			filter: grayscale(1);
-		}
-		
-		a:hover {
-			img {
-				transform: scale(1.2);
-				filter: grayscale(0);
-			}
-		}
-	}
 }
 
 
@@ -702,15 +656,65 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
+/*------------------------ BLOG -------------------------------*/
+.blog {
+	min-height: 100%;
+	
+	h3 {
+		font-family: $police-ters;
+		font-size: 1.5rem;
+		margin-bottom: 0;
+	}
+	
+	h5 {
+		font-family: $police-princ;
+		font-size: 1rem;
+		margin-top: 0;
+	}
+	
+	p {
+		margin-bottom: 1rem;
+	}
+	
+	a {
+		color: $clr-txt;
+		text-decoration: none;
+		
+		&:hover {
+			color: $clr-background-lien-hover;
+		}
+	}
+	
+	ul {
+		li {
+			list-style: none;
+		}
+	}
+	
+	.categories {
+		float: left;
+		background-color: $clr-princ;
+		margin: 0.3rem 0.3rem 0.3rem 0;
+		padding: 0.3rem;
+	}
+	
+	.image {
+		overflow: hidden;
+		max-height: 240px;
+	}
+	
+	img {
+		transition: all 0.3s ease;
+		filter: grayscale(1);
+	}
+	
+	a:hover {
+		img {
+			transform: scale(1.2);
+			filter: grayscale(0);
+		}
+	}
+}
 
 
 
