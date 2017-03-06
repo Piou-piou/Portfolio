@@ -7,5 +7,5 @@
 	
 	$arr = \modules\blog\app\controller\Blog::getValues();
 	
-	\core\App::setTitle("Blog module list articles of category ".$category->getNamemCategorieUrl());
-	\core\App::setDescription("Description of the blog module ". $category->getNamemCategorieUrl());
+	\core\App::setTitle("Anthony Pilloud blog liste des articles de la catégorie : ".$category->getNamemCategorieUrl());
+	\core\App::setDescription("Page d'articles rédigés par Anthony Pilloud développeur web en Franche-Comté ayant pour catégorie ". $category->getNamemCategorieUrl());
