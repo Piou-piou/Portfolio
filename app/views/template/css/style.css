@@ -206,6 +206,13 @@ a {
   .page-fond.fond-portfolio {
     padding-bottom: 150px;
     overflow: hidden; }
+  .page-fond.blog:before {
+    background: url(../images/accueil-bas.png) center top no-repeat;
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    top: -120px;
+    content: " "; }
 
 .page-couleur {
   position: relative;
@@ -411,13 +418,6 @@ a {
 
 .blog {
   color: #fff; }
-  .blog:before {
-    background: url(../images/accueil-bas.png) center top no-repeat;
-    position: absolute;
-    height: 150px;
-    width: 100%;
-    top: -120px;
-    content: " "; }
   .blog .titre {
     text-align: center; }
     .blog .titre h1 {
@@ -442,7 +442,7 @@ a {
   .blog p {
     margin-bottom: 1rem; }
   .blog a {
-    color: #c4c4c4;
+    color: #FFFFFF;
     text-decoration: none; }
     .blog a:hover {
       color: #FF5253; }

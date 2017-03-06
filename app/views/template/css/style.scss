@@ -343,6 +343,17 @@ a {
 		padding-bottom: 150px;
 		overflow: hidden;
 	}
+	
+	&.blog {
+		&:before {
+			background: url(../images/accueil-bas.png) center top no-repeat;
+			position: absolute;
+			height: 150px;
+			width: 100%;
+			top: -120px;
+			content: " ";
+		}
+	}
 }
 
 .page-couleur {
@@ -668,15 +679,6 @@ a {
 .blog {
 	color: #fff;
 	
-	&:before {
-		background: url(../images/accueil-bas.png) center top no-repeat;
-		position: absolute;
-		height: 150px;
-		width: 100%;
-		top: -120px;
-		content: " ";
-	}
-	
 	.titre {
 		text-align: center;
 		
@@ -716,7 +718,7 @@ a {
 	}
 	
 	a {
-		color: $clr-txt;
+		color: $clr-titre;
 		text-decoration: none;
 		
 		&:hover {
