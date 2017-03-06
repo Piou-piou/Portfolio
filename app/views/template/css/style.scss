@@ -657,8 +657,47 @@ a {
 
 
 /*------------------------ BLOG -------------------------------*/
+.blog #accueil {
+	padding-bottom: 150px;
+	
+	.droite .texte h5 {
+		margin-top: 7.5px;
+	}
+}
+
 .blog {
-	min-height: 100%;
+	color: #fff;
+	
+	&:before {
+		background: url(../images/accueil-bas.png) center top no-repeat;
+		position: absolute;
+		height: 150px;
+		width: 100%;
+		top: -120px;
+		content: " ";
+	}
+	
+	.titre {
+		text-align: center;
+		
+		h1 {
+			color: $clr-titre;
+			font-family: $police-ters;
+		}
+		h5 {
+			color: $clr-txt;
+			margin-bottom: 1.5rem;
+			
+			span {
+				color: $clr-princ;
+			}
+		}
+	}
+	
+	h1 {
+		font-family: $police-ters;
+		margin-bottom: 0;
+	}
 	
 	h3 {
 		font-family: $police-ters;

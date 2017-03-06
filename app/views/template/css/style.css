@@ -404,8 +404,33 @@ a {
   .contact .submit {
     margin-top: 0.7rem; } }
 /*------------------------ BLOG -------------------------------*/
+.blog #accueil {
+  padding-bottom: 150px; }
+  .blog #accueil .droite .texte h5 {
+    margin-top: 7.5px; }
+
 .blog {
-  min-height: 100%; }
+  color: #fff; }
+  .blog:before {
+    background: url(../images/accueil-bas.png) center top no-repeat;
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    top: -120px;
+    content: " "; }
+  .blog .titre {
+    text-align: center; }
+    .blog .titre h1 {
+      color: #FFFFFF;
+      font-family: "open-extrabold"; }
+    .blog .titre h5 {
+      color: #c4c4c4;
+      margin-bottom: 1.5rem; }
+      .blog .titre h5 span {
+        color: #DE4344; }
+  .blog h1 {
+    font-family: "open-extrabold";
+    margin-bottom: 0; }
   .blog h3 {
     font-family: "open-extrabold";
     font-size: 1.5rem;

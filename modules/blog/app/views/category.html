@@ -1,40 +1,50 @@
+{% include("header.html") %}
+
+{#this page show only last articles ordered by date_creation#}
 <div class="page-fond blog">
-	<div class="row">
-		{% if blog.articles is iterable %}
-			{% for i in blog.articles %}
-				<article class="small-12 medium-4 columns">
-					<div class="small-12">
-						<a href="{{ WEBROOT }}blog/article/{{ i.url }}" title="{{ i.title }}">
-							<div class="image">
-								<img src="{{ i.image }}" alt="Image article{{ i.title }} ">
-							</div>
-							
-							<h3>{{ i.title }}</h3>
-							<h5>Posté par {{ i.pseudo }} | {{ i.publication_date }} </h5>
-						</a>
-						
-						<p>{{ i.article|raw }}</p>
-					</div>
-					
-					{% for x in i.categories %}
-						<div class="categories"><a href="{{ WEBROOT }}blog/category/{{ x.url_category }}">{{ x.category }}</a></div>
-					{% endfor %}
-				</article>
-			{% endfor %}
-		{% else %}
-			<div class="small-12 columns">
-				<p class="small-12">Il n'y a encore pas d'article de blog dans cette catégorie pour le moment, ils vont arriver sous peu.</p>
-			</div>
-		{% endif %}
+	<div class="row titre">
+		<h1>Blog</h1>
+		<h5>Tu <span>trouveras</span> sur ce <span>blog</span> des articles sur <span>mes projets</span> !</h5>
 	</div>
+	
 	<div class="row">
-		{% if blog.categories_list is iterable %}
-			<h3>Categories list</h3>
-			<ul>
-				{% for i in blog.categories_list %}
-					<li><a href="{{ WEBROOT }}blog/category/{{ i.url_category }}">{{ i.category }}</a></li>
+		<div class="small-12 medium-9 columns">
+			{% if blog.articles is iterable %}
+				{% for i in blog.articles %}
+					<article class="small-12 medium-4 columns">
+						<div class="small-12">
+							<a href="{{ WEBROOT }}blog/article/{{ i.url }}" title="{{ i.title }}">
+								<div class="image">
+									<img src="{{ i.image }}" alt="Image article{{ i.title }} ">
+								</div>
+								
+								<h3>{{ i.title }}</h3>
+								<h5>Posté par {{ i.pseudo }} | {{ i.publication_date }} </h5>
+							</a>
+							
+							<p>{{ i.article|raw }}</p>
+						</div>
+						
+						{% for x in i.categories %}
+							<div class="categories"><a href="{{ WEBROOT }}blog/category/{{ x.url_category }}">{{ x.category }}</a></div>
+						{% endfor %}
+					</article>
 				{% endfor %}
-			</ul>
-		{% endif %}
+			{% else %}
+				<div class="small-12 columns">
+					<p class="small-12">Il n'y a encore pas d'article de blog pour le moment, ils vont arriver sous peu.</p>
+				</div>
+			{% endif %}
+		</div>
+		<div class="small-12 medium-3 columns">
+			{% if blog.categories_list is iterable %}
+				<h3>Catégories</h3>
+				<ul>
+					{% for i in blog.categories_list %}
+						<li><a href="{{ WEBROOT }}blog/category/{{ i.url_category }}">{{ i.category }}</a></li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
 	</div>
 </div>
