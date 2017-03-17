@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
     jQuery(".nav-responsive i").click(function(e) {
         e.preventDefault();
         $this = jQuery(this).parent();
