@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<title><?=$titre_page?></title>
+		<title><?=\core\App::getTitle()?></title>
 		<meta charset="utf-8">
-		<meta name="description" content="<?=$description_page?>">
+		<meta name="description" content="<?=\core\App::getDescription()?>">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="<?=WEBROOT?>libs/font_awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="<?=WEBROOT?>libs/font_awesome/css/animate.css">
-		<?php if ($config->getResponsive() == 1){?>
-			<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-			<link rel="stylesheet" type="text/css" href="<?=TPLWEBROOT?>css/foundation.css">
-			<link rel="stylesheet" type="text/css" href="<?=TPLWEBROOT?>css/nav-responsive.css">
-			<script src="<?=TPLWEBROOT?>js/nav-responsive.js"></script>
-		<?php } else {?>
-		<link rel="stylesheet" type="text/css" href="<?=LIBSWEBROOT?>reset_css/reset.css">
-		<?php } ?>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<link rel="stylesheet" type="text/css" href="<?=TPLWEBROOT?>css/foundation.css">
+		<script src="<?=TPLWEBROOT?>js/nav-responsive.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?=TPLWEBROOT?>css/style.css">
 	</head>
 	<?=\core\HTML\flashmessage\FlashMessage::getFlash();?>
@@ -22,11 +16,7 @@
 		<?php
 			if ($config->getDesactiverNavigation() != 1) {
 				require_once(ROOT."app/views/template/navigation.php");
-				if ($config->getResponsive() == 1) require_once(ROOT."app/views/template/nav_responsive.php");
-			}
-			
-			if ($page == "index") {
-				require_once(ROOT."app/controller/initialise_blog.php");
+				require_once(ROOT."app/views/template/nav_responsive.php");
 			}
 		?>
 		
@@ -34,11 +24,11 @@
 		<?php echo $twig->render($page.".html", array_merge(array_merge(array_merge($arr, $constant), $_REQUEST), $_SESSION)); ?>
 		
 		<script>
-			jQuery(document).ready(function() {
-                jQuery("div").each(function() {
-                    jQuery(this).removeAttr("contenteditable").blur();
-				})
-			})
+            $(document).ready(function() {
+                $("div").each(function() {
+                    $(this).removeAttr("contenteditable").blur();
+                })
+            })
 		</script>
 	</body>
 </html>
