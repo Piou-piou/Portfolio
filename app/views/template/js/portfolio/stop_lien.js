@@ -27,5 +27,12 @@ jQuery(document).ready(function() {
             "opacity": "0",
             "transition": "4s"
         });
+        
+        setTimeout(disableCard, 3000);
     })
+    
+    function disableCard() {
+        jQuery(".card__content").css({"display": "none"});
+        jQuery(".card").css({"display": "none"});
+    }
 });

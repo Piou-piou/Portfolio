@@ -510,10 +510,10 @@ a {
 					transition: 0.3s;
 					background: linear-gradient($clr-sec, $clr-sec) no-repeat left bottom,
 					linear-gradient($clr-sec, $clr-sec) no-repeat right top;
-					background-size: 50% 0%, 50% 0%;
+					background-size: 52% 0%, 52% 0%;
 					
 					&:hover {
-						background-size: 51% 100%, 51% 100%;
+						background-size: 52% 100%, 52% 100%;
 						cursor: pointer;
 					}
 				}
@@ -533,11 +533,28 @@ a {
 				transition: 0.3s;
 				background: linear-gradient($clr-sec, $clr-sec) no-repeat left bottom,
 				linear-gradient($clr-sec, $clr-sec) no-repeat right top;
-				background-size: 50% 0%, 50% 0%;
+				background-size: 52% 0%, 52% 0%;
 				
 				&:hover {
-					background-size: 50% 100%, 50% 100%;
+					background-size: 52% 100%, 52% 100%;
 					cursor: pointer;
+				}
+			}
+			
+			.card {
+				a {
+					color: #000;
+					border: 2px solid $clr-princ;
+					
+					background: linear-gradient($clr-princ, $clr-princ) no-repeat left bottom,
+					linear-gradient($clr-princ, $clr-princ) no-repeat right top;
+					background-size: 52% 0%, 52% 0%;
+					
+					&:hover {
+						background-size: 52% 100%, 52% 100%;
+						cursor: pointer;
+						color: #fff;
+					}
 				}
 			}
 		}

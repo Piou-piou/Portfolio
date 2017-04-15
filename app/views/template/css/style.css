@@ -370,9 +370,9 @@ a {
     padding: 5px;
     transition: 0.3s;
     background: linear-gradient(#242425, #242425) no-repeat left bottom, linear-gradient(#242425, #242425) no-repeat right top;
-    background-size: 50% 0%, 50% 0%; }
+    background-size: 52% 0%, 52% 0%; }
     .portfolio .projets .un-projet h5 span:hover, .portfolio .projets .un-projet h6 span:hover {
-      background-size: 51% 100%, 51% 100%;
+      background-size: 52% 100%, 52% 100%;
       cursor: pointer; }
   .portfolio .projets .un-projet article {
     padding: 0 10px; }
@@ -385,10 +385,19 @@ a {
     margin: 1rem;
     transition: 0.3s;
     background: linear-gradient(#242425, #242425) no-repeat left bottom, linear-gradient(#242425, #242425) no-repeat right top;
-    background-size: 50% 0%, 50% 0%; }
+    background-size: 52% 0%, 52% 0%; }
     .portfolio .projets .un-projet a:hover {
-      background-size: 50% 100%, 50% 100%;
+      background-size: 52% 100%, 52% 100%;
       cursor: pointer; }
+  .portfolio .projets .un-projet .card a {
+    color: #000;
+    border: 2px solid #DE4344;
+    background: linear-gradient(#DE4344, #DE4344) no-repeat left bottom, linear-gradient(#DE4344, #DE4344) no-repeat right top;
+    background-size: 52% 0%, 52% 0%; }
+    .portfolio .projets .un-projet .card a:hover {
+      background-size: 52% 100%, 52% 100%;
+      cursor: pointer;
+      color: #fff; }
 
 /*------------------------ CONTACT -------------------------------*/
 .contact:before {
