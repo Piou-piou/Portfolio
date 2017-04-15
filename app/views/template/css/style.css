@@ -263,7 +263,6 @@ a {
   background-color: #242425;
   width: 100%; }
   .page-fond.fond-portfolio {
-    padding-bottom: 150px;
     overflow: hidden; }
   .page-fond.blog:before {
     background: url(../images/accueil-bas.png) center top no-repeat;
@@ -281,7 +280,7 @@ a {
 
 /*------------------------ GLOBAL -------------------------------*/
 .a-propos, .competences, .portfolio, .contact {
-  padding-bottom: 100px; }
+  padding-bottom: 130px; }
   .a-propos .titre, .competences .titre, .portfolio .titre, .contact .titre {
     text-align: center; }
     .a-propos .titre h1, .competences .titre h1, .portfolio .titre h1, .contact .titre h1 {
