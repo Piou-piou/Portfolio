@@ -10,7 +10,7 @@ var demo = (function(window, undefined) {
    */
   var SELECTORS = {
     pattern: '.pattern',
-    card: '.projets > div > div',
+    card: '.projets > div > div > div',
     cardImage: '.projets > div .suite',
     cardClose: '.card__btn-close',
   };
