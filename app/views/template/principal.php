@@ -7,7 +7,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<link rel="stylesheet" type="text/css" href="<?=TPLWEBROOT?>css/foundation.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
 		<script src="<?=TPLWEBROOT?>js/nav-responsive.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?=TPLWEBROOT?>css/style.css">
 	</head>

@@ -10,8 +10,8 @@ var demo = (function(window, undefined) {
    */
   var SELECTORS = {
     pattern: '.pattern',
-    card: '.projets > div',
-    cardImage: '.projets > div .suite, .projets > div .masque',
+    card: '.projets > div > div',
+    cardImage: '.projets > div .suite',
     cardClose: '.card__btn-close',
   };
 
