@@ -1,0 +1,75 @@
+{% include("header.html") %}
+
+<form action="{{ ADMWEBROOT }}controller/modules/portfolio/projet/edit" method="post">
+	<button class="submit-contenu" type="submit">Modifier</button>
+	<button class="submit-contenu supprimer-page supprimer open-popup" popup="popup-delete" href="{{ ADMWEBROOT }}controller/modules/blog/article/delete.php?id_article={{ portfolio.projet.id_article }}">Supprimer le projet</button>
+	
+	<div class="inner">
+		<section class="contenu modifier-contenu">
+			<div>
+				<div class="colonne">
+					<h2>Titre du projet</h2>
+					<div class="bloc">
+						<label class="label" for="title"  data-error="Le titre de l'article doit être entre 4 et 20 caractères">Titre du projet</label>
+						<input type="text" name="title" type-val="string" min="4" max="20" required="" value="{{ portfolio.projet.titre }}"/>
+					</div>
+				</div>
+				<div class="colonne">
+					<h2>Url du projet</h2>
+					<div class="bloc">
+						<label class="label" for="url"  data-error="L'url de l'article doit être entre 4 et 20 caractères">Url du projet</label>
+						<input type="text" name="url" type-val="string" min="4" max="20" required="" value="{{ portfolio.projet.url }}"/>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="colonne">
+					<h2>Numéro de colonne</h2>
+					<div class="bloc">
+						<label class="label" for="colonne"  data-error="Le titre de l'article doit être entre 4 et 20 caractères">Numéro de colonne</label>
+						<input type="text" name="colonne" type-val="string" min="4" max="20" required="" value="{{ portfolio.projet.colonne }}"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="contenu modifier-contenu">
+			<h2>Catégories du projet</h2>
+			
+			<div class="espacement"></div>
+			
+			{% for i in portfolio.categories_list %}
+				{{ i.category }}
+			
+				{% set checked = "" %}
+				{% for x in portfolio.projet.categories %}
+					{% if i.category == x.category %}
+						{% set checked = "checked" %}
+					{% endif %}
+				{% endfor %}
+				<input type="checkbox" name="categories[]" value="{{ i.id_category }}" {{ checked }}>
+			{% endfor %}
+		</section>
+		
+		<section class="contenu modifier-contenu">
+			<h2>Contenu de votre projet</h2>
+			<script src="{{ LIBSWEBROOT }}ckeditor/ckeditor.js"></script>
+			<script src="{{ LIBSWEBROOT }}ckfinder/ckfinder.js"></script>
+			<script src="{{ WEBROOT }}config/config_ckeditor.js"></script>
+			<script>
+                $(document).ready(function() {
+                    var editor = CKEDITOR.replace('article');
+                    CKFinder.setupCKEditor(editor, "/libs/ckfinder/");
+                });
+			</script>
+			<div class="bloc">
+				<textarea name="article" id="article" cols="30" rows="10" class="article">
+					{{ portfolio.projet.description }}
+				</textarea>
+			</div>
+		</section>
+	
+	</div>
+	
+	<input type="hidden" name="id_projet" value="{{ portfolio.projet.id_portfolio}}">
+</form>

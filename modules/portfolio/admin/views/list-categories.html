@@ -1,0 +1,16 @@
+{% include("header.html") %}
+
+<div class="inner">
+	<section class="contenu modifier-contenu added-module">
+		<div class="liste-element">
+			{% for i in blog.categories_list %}
+				<div>
+					<p>{{ i.category }}</p>
+					<a href="{{ ADMWEBROOT }}modules/blog/category/edit-category/{{ i.url_category }}">Modifier</a>
+					<a href="{{ ADMWEBROOT }}controller/modules/blog/category/delete.php?id_category={{ i.id_category }}" class="open-popup" popup="popup-delete-category">Supprimer</a>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="clear"></div>
+	</section>
+</div>

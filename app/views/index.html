@@ -236,6 +236,55 @@
 		<div class="projets row expanded collapse">
 			<div class="small-12 medium-12 large-6 columns">
 				<div class="small-12 medium-6 large-6 columns">
+					{#{% for i in portfolio.colonne1 %}
+						<div class="un-projet">
+							<img src="{{ MODULEWEBROOT }}portfolio/images/{{ i.image }}.png" alt="projet {{ i.titre }} développeur web franche-comté">
+							
+							<article>
+								<h2>{{ i.titre }}</h2>
+								<h6>
+									{% for x in i.categories %}
+									<span>{{ x.category }}</span>
+									{% endfor %}
+								</h6>
+								
+								{{ i.description|raw }}
+								
+								<a class="suite" title="lire la suite du projet {{ i.titre }}">Lire la suite</a>
+								<div class="clear"></div>
+							</article>
+							
+							<div class="card">
+								<div class="card__container card__container--closed">
+									<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+										<defs>
+											<clipPath id="clipPath{{ i.id_portfolio }}">
+												<circle class="clip" cx="960" cy="250" r="992"></circle>
+											</clipPath>
+										</defs>
+										<image class="img-presentation" clip-path="url(#clipPath{{ i.id_portfolio }})" width="1920" height="500" xlink:href="{{ MODULEWEBROOT }}portfolio/images/grande/{{ i.image }}.png"></image>
+									</svg>
+									
+									<div class="card__content">
+										<i class="card__btn-close fa fa-times"></i>
+										<div class="card__caption">
+										</div>
+										<div class="card__copy">
+											<div class="meta">
+												<span class="meta__author">{{ i.titre }}</span>
+												<span class="meta__date">{% for x in i.categories %}{{ x.category }} {% endfor %}</span>
+												<span class="meta__date"><a href="{{ i.url }}" title="Lien de démo vers {{ i.titre }}" target="_blank">Lien de démo vers {{ i.titre }}</a></span>
+											</div>
+											
+											{{ i.description|raw }}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}#}
+					
+					
 					<div class="un-projet">
 						<img src="{{ TPLWEBROOT }}images/portfolio/ribs.jpg" alt="projet ribs framework développé par Anthony Pilloud développeur web en Franche-Comté">
 						

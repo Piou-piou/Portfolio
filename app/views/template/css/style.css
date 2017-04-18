@@ -237,7 +237,7 @@ a {
         #accueil .accueil .droite .texte span {
           color: #242425; }
         #accueil .accueil .droite .texte h5 {
-          margin-top: 11.5px; }
+          /*margin-top: 11.5px;*/ }
     @media screen and (max-width: 560px) {
       #accueil .accueil .gauche {
         width: 50%; }
