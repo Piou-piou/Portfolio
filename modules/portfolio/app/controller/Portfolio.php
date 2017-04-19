@@ -27,7 +27,8 @@
 							"image" => $obj->image,
 							"url" => $obj->lien,
 							"colonne" => $obj->colonne,
-							"categories" => self::getCategory()->getCategoryProject($obj->ID_portfolio)
+							"categories" => self::getCategory()->getCategoryProject($obj->ID_portfolio),
+							"extrait" => $this->getExtrait($obj->description)
 						];
 					}
 					
@@ -39,6 +40,14 @@
 		
 		
 		//-------------------------- GETTER ----------------------------------------------------------------------------//
+		/**
+		 * @return array
+		 * get array of all values wich will be used in the page
+		 */
+		public static function getValues() {
+			return ["portfolio" => self::$values];
+		}
+		
 		public function getProjetColonne($colonne) {
 			$dbc = App::getDb();
 			$query = $dbc->select()->from("_portfolio")->where("colonne", "=", $colonne)->orderBy("", "RAND()")->get();
@@ -54,7 +63,8 @@
 						"image" => $obj->image,
 						"url" => $obj->lien,
 						"colonne" => $obj->colonne,
-						"categories" => self::getCategory()->getCategoryProject($obj->ID_portfolio)
+						"categories" => self::getCategory()->getCategoryProject($obj->ID_portfolio),
+						"extrait" => $this->getExtrait($obj->description)
 					];
 				}
 				
@@ -62,12 +72,21 @@
 			}
 		}
 		
-		/**
-		 * @return array
-		 * get array of all values wich will be used in the page
-		 */
-		public static function getValues() {
-			return ["portfolio" => self::$values];
+		private function getExtrait($description) {
+			$pos_p1 = strpos($description, "<p>");
+			$fin_p1 = strpos($description, "</p>", $pos_p1);
+			$p1 = substr($description, $pos_p1, $fin_p1);
+			
+			$description = str_replace($p1, "", $description);
+			
+			$pos_p2 = strpos($description, "<p>" );
+			$fin_p2 = strpos($description, "</p>", $pos_p2);
+			$p2 = substr($description, $pos_p2, $fin_p2);
+			
+			return [
+				"p1" => $p1,
+				"p2" => $p2
+			];
 		}
 		
 		public static function getCategory() {

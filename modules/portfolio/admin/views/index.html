@@ -5,7 +5,7 @@
 		{% for i in portfolio.projets %}
 			<div class="bloc">
 				<div class="image">
-					<img src="{{ MODULEWEBROOT }}portfolio/images/{{ i.image }}.png" alt="">
+					<img src="{{ MODULEWEBROOT }}portfolio/images/{{ i.image }}.jpg" alt="">
 				</div>
 				<div class="categorie">
 					<ul>
@@ -16,6 +16,9 @@
 				</div>
 				
 				<h2>{{ i.titre }}</h2>
+				<h3>Colonne : {{ i.colonne }}</h3>
+				
+				<p>{{ i.extrait.p1|raw }}</p>
 				
 				<a class="modifier" href="{{ ADMWEBROOT }}modules/portfolio/edit-article?id_projet={{ i.id_portfolio }}">Modifier l'article</a>
 				<a class="supprimer open-popup" popup="popup-delete-article" href="{{ ADMWEBROOT }}controller/modules/portfolio/projet/delete.php?id_projet={{ i.id_portfolio }}&titre={{ i.titre }}">Supprimer l'article</a>

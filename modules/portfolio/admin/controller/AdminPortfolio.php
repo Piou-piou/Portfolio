@@ -38,8 +38,8 @@
 			if (!empty($_FILES['image']['tmp_name'])) {
 				$title_image = ChaineCaractere::setUrl($title);
 				
-				$name_image = ROOT."modules/portfolio/images/".$title_image.".png";
-				$name_image1 = ROOT."modules/portfolio/images/grande/".$title_image.".png";
+				$name_image = ROOT."modules/portfolio/images/".$title_image.".jpg";
+				$name_image1 = ROOT."modules/portfolio/images/grande/".$title_image.".jpg";
 				
 				$manager = new ImageManager();
 				$image = $manager->make($_FILES['image']['tmp_name']);
