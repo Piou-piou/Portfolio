@@ -16,4 +16,6 @@
 	$portfolio->getProjetColonne(3);
 	$portfolio->getProjetColonne(4);
 	
+	$portfolio_cat = new \modules\portfolio\app\controller\Category();
+	
 	$arr = array_merge($arr, \modules\portfolio\app\controller\Portfolio::getValues());

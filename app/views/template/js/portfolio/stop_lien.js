@@ -1,5 +1,6 @@
-jQuery(document).ready(function() {
-
+jQuery(document).ready(function($) {
+    
+    //pour l'effet des cartes
     jQuery(".card__content").css({"display": "none"});
     jQuery(".card").css({"display": "none"});
 
@@ -35,4 +36,14 @@ jQuery(document).ready(function() {
         jQuery(".card__content").css({"display": "none"});
         jQuery(".card").css({"display": "none"});
     }
+    
+    
+    
+    //pour afficher uniquement une catégorie
+    /*$(".check-category li").click(function(e) {
+       var id = "."+$(this).attr("id");
+       
+       $(".portfolio .projets .un-projet").css("display", "none");
+       $(".portfolio .projets "+id).css("display", "block");
+    });*/
 });

@@ -237,7 +237,7 @@
 			<div class="small-12 medium-12 large-6 columns">
 				<div class="small-12 medium-6 large-6 columns">
 					{% for i in portfolio.colonne1 %}
-						<div class="un-projet">
+						<div class="un-projet {% for x in i.categories %}category-{{ x.id_category }} {% endfor %}">
 							<img src="{{ MODULEWEBROOT }}portfolio/images/{{ i.image }}.jpg" alt="projet {{ i.titre }} développeur web franche-comté">
 							
 							<article>
@@ -297,7 +297,7 @@
 				
 				<div class="small-12 medium-6 large-6 columns">
 					{% for i in portfolio.colonne2 %}
-						<div class="un-projet">
+						<div class="un-projet  {% for x in i.categories %}category-{{ x.id_category }} {% endfor %}">
 							<img src="{{ MODULEWEBROOT }}portfolio/images/{{ i.image }}.jpg" alt="projet {{ i.titre }} développeur web franche-comté">
 							
 							<article>
@@ -356,7 +356,7 @@
 			<div class="small-12 medium-12 large-6 columns">
 				<div class="small-12 medium-6 large-6 columns">
 					{% for i in portfolio.colonne3 %}
-						<div class="un-projet">
+						<div class="un-projet  {% for x in i.categories %}category-{{ x.id_category }} {% endfor %}">
 							<img src="{{ MODULEWEBROOT }}portfolio/images/{{ i.image }}.jpg" alt="projet {{ i.titre }} développeur web franche-comté">
 							
 							<article>
@@ -416,7 +416,7 @@
 				
 				<div class="small-12 medium-6 large-6 columns">
 					{% for i in portfolio.colonne4 %}
-						<div class="un-projet">
+						<div class="un-projet  {% for x in i.categories %}category-{{ x.id_category }} {% endfor %}">
 							<img src="{{ MODULEWEBROOT }}portfolio/images/{{ i.image }}.jpg" alt="projet {{ i.titre }} développeur web franche-comté">
 							
 							<article>
