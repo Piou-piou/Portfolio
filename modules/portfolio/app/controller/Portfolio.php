@@ -50,7 +50,7 @@
 		
 		public function getProjetColonne($colonne) {
 			$dbc = App::getDb();
-			$query = $dbc->select()->from("_portfolio")->where("colonne", "=", $colonne)->orderBy("", "RAND()")->get();
+			$query = $dbc->select()->from("_portfolio")->where("colonne", "=", $colonne)->orderBy("ordre", "ASC")->get();
 			
 			if ((is_array($query)) && (count($query) > 0)) {
 				$articles = [];
