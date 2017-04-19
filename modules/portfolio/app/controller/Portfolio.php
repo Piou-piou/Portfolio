@@ -28,7 +28,8 @@
 							"url" => $obj->lien,
 							"colonne" => $obj->colonne,
 							"categories" => self::getCategory()->getCategoryProject($obj->ID_portfolio),
-							"extrait" => $this->getExtrait($obj->description)
+							"extrait" => $this->getExtrait($obj->description),
+							"ordre" => $obj->ordre
 						];
 					}
 					
@@ -111,11 +112,16 @@
 						"image" => $obj->image,
 						"url" => $obj->lien,
 						"colonne" => $obj->colonne,
-						"categories" => self::getCategory()->getCategoryProject($obj->ID_portfolio)
+						"categories" => self::getCategory()->getCategoryProject($obj->ID_portfolio),
+						"ordre" => $obj->ordre
 					];
+					
+					$ordre = $obj->ordre;
 				}
 				
 				self::setValues(["projet" => $projet]);
+				
+				return $ordre;
 			}
 		}
 		//-------------------------- END GETTER ----------------------------------------------------------------------------//

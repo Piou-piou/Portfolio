@@ -6,9 +6,10 @@
 	use Intervention\Image\ImageManager;
 	use core\functions\ChaineCaractere;
 	use core\HTML\flashmessage\FlashMessage;
+	use modules\portfolio\app\controller\Portfolio;
 	
 	
-	class AdminPortfolio {
+	class AdminPortfolio extends Portfolio {
 		private static $admin_category;
 		
 		//-------------------------- BUILDER ----------------------------------------------------------------------------//
@@ -52,6 +53,22 @@
 			}
 		}
 		
+		private function setOrdreProjets($ordre, $colonne) {
+			$dbc = App::getDb();
+			
+			$query = $dbc->select()->from("_portfolio")->where("ordre", "=", $ordre, "AND")
+				->where("colonne", "=", $colonne)->get();
+			
+			if (count($query) > 0) {
+				$query = $dbc->select()->from("_portfolio")->where("ordre", ">=", $ordre, "AND")
+					->where("colonne", "=", $colonne)->get();
+				
+				foreach ($query as $obj) {
+					$dbc->update("ordre", $obj->ordre+1)->from("_portfolio")->where("ID_portfolio", "=", $obj->ID_portfolio)->set();
+				}
+			}
+		}
+		
 		/**
 		 * @param $title
 		 * @param $categories
@@ -60,16 +77,19 @@
 		 * @return bool
 		 * function to add an article and his categories
 		 */
-		public function setAddProjet($title, $categories, $article, $url, $colonne) {
+		public function setAddProjet($title, $categories, $article, $url, $colonne, $ordre) {
 			$dbc = App::getDb();
 			
 			$this->setImageProjet($title);
+			
+			$this->setOrdreProjets($ordre, $colonne);
 			
 			$dbc->insert("titre", $title)
 				->insert("lien", $url)
 				->insert("image", ChaineCaractere::setUrl($title))
 				->insert("description", $article)
 				->insert("colonne", $colonne)
+				->insert("ordre", $ordre)
 				->into("_portfolio")->set();
 			
 			$id_projet = $dbc->lastInsertId();
@@ -86,8 +106,10 @@
 		 * @return bool
 		 * function to edit an article and his categories
 		 */
-		public function setEditProjet($title, $categories, $article, $url, $colonne, $id_projet) {
+		public function setEditProjet($title, $categories, $article, $url, $colonne, $ordre, $id_projet) {
 			$dbc = App::getDb();
+			
+			$ordre_projet = $this->getProjet($id_projet);
 			
 			self::getAdminCategory()->setUpdateCategoriesProjet($categories, $id_projet);
 			
@@ -95,9 +117,14 @@
 				->update("lien", $url)
 				->update("description", $article)
 				->update("colonne", $colonne)
+				->update("ordre", $ordre)
 				->from("_portfolio")
 				->where("ID_portfolio", "=", $id_projet)
 				->set();
+			
+			if ($ordre_projet != $ordre) {
+				$this->setOrdreProjets($ordre, $colonne);
+			}
 			
 			return true;
 		}
