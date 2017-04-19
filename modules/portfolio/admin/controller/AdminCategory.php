@@ -5,6 +5,7 @@
 	use core\App;
 	use core\functions\ChaineCaractere;
 	use core\HTML\flashmessage\FlashMessage;
+	use modules\portfolio\app\controller\Portfolio;
 	
 	class AdminCategory {
 		
@@ -17,6 +18,20 @@
 		
 		
 		//-------------------------- GETTER ----------------------------------------------------------------------------//
+		public function getCategory($id_category) {
+			$dbc = App::getDb();
+			
+			$query = $dbc->select()->from("_portfolio_tag")->where("ID_tag", "=", $id_category)->get();
+			
+			if (count($query) == 1) {
+				foreach ($query as $obj) {
+					Portfolio::setValues([
+						"category_name" => $obj->nom,
+						"id_category" => $obj->ID_tag
+					]);
+				}
+			}
+		}
 		//-------------------------- END GETTER ----------------------------------------------------------------------------//
 		
 		
@@ -29,7 +44,7 @@
 		public function setAddCategory($name) {
 			$dbc = App::getDb();
 
-			$dbc->insert("category", $name)->insert("url_category", ChaineCaractere::setUrl($name))->into("_blog_category")->set();
+			$dbc->insert("nom", $name)->into("_portfolio_tag")->set();
 			FlashMessage::setFlash("Votre catégorie a été correctement ajoutée", "success");
 			return true;
 		}
@@ -43,8 +58,7 @@
 		public function setEditCategory($name, $id) {
 			$dbc = App::getDb();
 			
-			$dbc->update("category", $name)->update("url_category", ChaineCaractere::setUrl($name))
-				->from("_blog_category")->where("ID_category", "=", $id)->set();
+			$dbc->update("nom", $name)->from("_portfolio_tag")->where("ID_tag", "=", $id)->set();
 			
 			FlashMessage::setFlash("Votre catégorie a été correctement ajoutée", "success");
 			return true;
@@ -92,8 +106,8 @@
 		public function setDeleteCategory($id_category) {
 			$dbc = App::getDb();
 			
-			$dbc->delete()->from("_blog_category")->where("ID_category", "=", $id_category)->del();
-			$dbc->delete()->from("_blog_article_category")->where("ID_category", "=", $id_category)->del();
+			$dbc->delete()->from("_portfolio_tag")->where("ID_tag", "=", $id_category)->del();
+			$dbc->delete()->from("_portfolio_portfolio_tag")->where("ID_tag", "=", $id_category)->del();
 		}
 		//-------------------------- END SETTER ----------------------------------------------------------------------------//
 	}

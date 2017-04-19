@@ -10,8 +10,8 @@
 	
 	if (\core\modules\GestionModule::getModuleActiver("portfolio")) {
 		if (!in_array($this->page, $pages_portfolio)) {
-			\core\HTML\flashmessage\FlashMessage::setFlash("Cette page n'existe pas ou plus");
-			header("location:".ADMWEBROOT);
+			//\core\HTML\flashmessage\FlashMessage::setFlash("Cette page n'existe pas ou plus");
+			//header("location:".ADMWEBROOT);
 		}
 		
 		//for articles pages
@@ -34,7 +34,6 @@
 		}
 		
 		if ($this->page == "edit-category") {
-			\modules\portfolio\app\controller\portfolio::$router_parameter = $this->parametre;
 			$this->controller = "portfolio/admin/controller/initialise/category.php";
 		}
 	}

@@ -1,5 +1,5 @@
 <?php
-	$category = new \modules\blog\admin\controller\AdminCategory();
-	$_SESSION['category_name'] = $category->getNameCategoryUrl();
+	$category = new \modules\portfolio\admin\controller\AdminCategory();
+	$category->getCategory($_GET["id_category"]);
 	
-	$arr = \modules\blog\app\controller\Blog::getValues();
+	$arr = \modules\portfolio\app\controller\Portfolio::getValues();
